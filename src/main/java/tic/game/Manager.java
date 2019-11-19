@@ -12,8 +12,8 @@ public class Manager {
     Player _currentPlayer;
 
     public void begin(IO io) {
-        _p1 = new Player();
-        _p2 = new Player();
+        _p1 = new Player("X");
+        _p2 = new Player("O");
         _board = new Board();
         _io = io;
     }

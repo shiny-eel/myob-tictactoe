@@ -9,7 +9,9 @@ public abstract class IO {
     public void showOutput(String output) {
         System.out.println(output);
     }
+
     public String getInput() {
         return _in.nextLine();
     }
+
 }

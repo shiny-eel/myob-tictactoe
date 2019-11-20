@@ -17,6 +17,7 @@ public class PlaceMove extends Move {
 
     @Override
     Pattern compilePattern() {
-        return null;
+        String p = "([1-3]),([1-3])";
+        return Pattern.compile(p);
     }
 }

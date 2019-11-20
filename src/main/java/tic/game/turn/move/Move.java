@@ -7,9 +7,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public abstract class Move {
-    Pattern _pattern;
-    Matcher _matcher;
-    Manager _manager;
+    protected Pattern _pattern;
+    protected Matcher _matcher;
+    protected Manager _manager;
 
     public Move(Manager manager){
         _pattern = compilePattern();

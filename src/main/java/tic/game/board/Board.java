@@ -4,8 +4,6 @@ import tic.game.Player;
 import tic.io.Displayable;
 import tic.io.IO;
 
-import java.util.Arrays;
-
 public class Board implements Displayable {
 
     private Tile[][] _map;

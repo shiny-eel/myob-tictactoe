@@ -18,6 +18,7 @@ public class QuitMove extends Move {
 
     @Override
     Pattern compilePattern() {
-        return null;
+        String p = "[Qq]";
+        return Pattern.compile(p);
     }
 }

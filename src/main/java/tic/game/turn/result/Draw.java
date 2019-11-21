@@ -7,7 +7,7 @@ public class Draw extends Result {
 
     @Override
     public void handle(Manager manager, IO io) {
-        io.showOutput("A draw has been reached.\n"); // TODO
+        io.showOutput("A draw has been reached.\n");
         manager.displayGame();
     }
 }

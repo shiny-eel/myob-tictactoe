@@ -6,6 +6,6 @@ import tic.io.IO;
 public class Exit extends Result {
     @Override
     public void handle(Manager manager, IO io) {
-        io.showOutput("EXITING"); // TODO
+        io.showOutput("Exiting the game.\n");
     }
 }

@@ -1,11 +1,16 @@
 package tic.game;
 
-
 import tic.game.board.Board;
 import tic.game.turn.result.Result;
 import tic.io.IO;
 
+/**
+ * Class with the responsibility of managing the game.
+ * Has knowledge of the board and players (including the current player).
+ * Responsible for prompting turns and handling their results.
+ */
 public class Manager {
+
     private IO _io;
     private Board _board;
     private Player _p1;
@@ -36,17 +41,10 @@ public class Manager {
         }
     }
 
-    public Player getCurrentPlayer() {
-        return _currentPlayer;
-    }
-
     public void nextTurn() {
         Result result = _currentPlayer.executeTurn(_io);
         result.handle(this, _io);
     }
-//    public IO getIO() {
-//        return _io;
-//    }
 
     public void displayGame() {
         _board.display(_io);

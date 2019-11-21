@@ -7,21 +7,24 @@ import tic.game.turn.result.Result;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Class to represent any possible 'move' in the TicTacToe game.
+ * Has responsibility of matching a String, and returning a Result once executed.
+ */
 public abstract class Move {
-    private Pattern pattern;
+    private Pattern _pattern;
     Matcher matcher;
     Player owner;
     protected Board board;
 
-
     public Move(Player owner, Board board) {
-        pattern = compilePattern();
+        _pattern = compilePattern();
         this.owner = owner;
         this.board = board;
     }
 
     public boolean matches(String line) {
-        matcher = pattern.matcher(line);
+        matcher = _pattern.matcher(line);
         return matcher.find();
     }
 

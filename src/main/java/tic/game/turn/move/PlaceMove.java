@@ -15,6 +15,7 @@ public class PlaceMove extends Move {
 
     @Override
     public Result handle() {
+        // User works in index 1, board is in index 0
         int row = Integer.parseInt(matcher.group(1)) - 1;
         int col = Integer.parseInt(matcher.group(2)) - 1;
         try {
@@ -32,6 +33,7 @@ public class PlaceMove extends Move {
 
     @Override
     Pattern compilePattern() {
+        // Assumes Board will only be 3*3 size
         String p = "([1-3]),([1-3])";
         return Pattern.compile(p);
     }

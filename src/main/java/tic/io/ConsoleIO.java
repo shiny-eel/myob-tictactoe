@@ -10,9 +10,4 @@ public class ConsoleIO extends IO {
 
     }
 
-
-//    @Override
-//    public String getInput() {
-//        return null;
-//    }
 }

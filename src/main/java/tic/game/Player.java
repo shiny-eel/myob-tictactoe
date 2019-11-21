@@ -12,19 +12,22 @@ import java.text.MessageFormat;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Class representing a TicTacToe player.
+ * Has the responsibility of executing a turn when asked
+ *      and remembering player details such as number and symbol
+ */
 public class Player {
 
     private String _symbol;
     private int _number;
     private List<Move> _moves;
-    private Board _board;
     private static final String PLACE_PROMPT =
             "Player {0} enter a coord x,y to place your {1} or enter {2} to give up:";
 
     public Player(String symbol, int number, Board board) {
         _number = number;
         _symbol = symbol;
-        _board = board;
         _moves = new LinkedList<>();
         _moves.add(new PlaceMove(this, board));
         _moves.add(new QuitMove(this, board));

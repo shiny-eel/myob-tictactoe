@@ -20,6 +20,7 @@ public class QuitMove extends Move {
 
     @Override
     Pattern compilePattern() {
+        // Case insensitive
         String p = "[Qq]";
         return Pattern.compile(p);
     }

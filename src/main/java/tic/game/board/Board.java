@@ -4,11 +4,16 @@ import tic.game.Player;
 import tic.io.Displayable;
 import tic.io.IO;
 
+/**
+ * Represents the 3x3 tictactoe grid.
+ * Has the responsibility of holding the state of the board.
+ */
 public class Board implements Displayable {
 
     private Tile[][] _map;
     private int _rows = 3;
     private int _cols = 3;
+    private static final String BAD_COORD = "Coordinate does not exist on board.";
 
     public Board() {
         _map = new Tile[_rows][_cols];
@@ -19,6 +24,15 @@ public class Board implements Displayable {
         }
     }
 
+    /**
+     * Method to place a player's symbol upon the board.
+     * @param row the index 0 row coord
+     * @param col the index 0 column coord
+     * @param player the player attempting to place a symbol
+     * @return a boolean - TRUE if the the win condition has been met.
+     *      FALSE otherwise.
+     * @throws BoardException when row and col out of bounds.
+     */
     public boolean place(int row, int col, Player player) throws BoardException {
         try {
             _map[row][col].owner = player;
@@ -37,9 +51,8 @@ public class Board implements Displayable {
                     && matches(2, 0, 0, 2))
                 return true;
         } catch (IndexOutOfBoundsException e) {
-            throw new BoardException("Coordinate does not exist on board.");
+            throw new BoardException(BAD_COORD);
         }
-
         return false;
     }
 
@@ -57,7 +70,7 @@ public class Board implements Displayable {
         try {
             return (_map[row][col].owner == null);
         } catch (IndexOutOfBoundsException e) {
-            throw new BoardException("Coordinate does not exist on board.");
+            throw new BoardException(BAD_COORD);
         }
     }
 
@@ -80,7 +93,7 @@ public class Board implements Displayable {
                 return false;
             return _map[r1][c1].owner == _map[r2][c2].owner;
         } catch (IndexOutOfBoundsException e) {
-            throw new BoardException("Coordinate does not exist on board.");
+            throw new BoardException(BAD_COORD);
         }
     }
 }

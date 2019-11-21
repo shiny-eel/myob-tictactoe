@@ -19,9 +19,9 @@ class BoardTest {
 
     @BeforeEach
     public void setUp() throws IOException {
-        p1 = new Player("X");
-        p2 = new Player("O");
         board = new Board();
+        p1 = new Player("X", 1, board);
+        p2 = new Player("O", 2, board);
         io = new MockIO();
     }
 

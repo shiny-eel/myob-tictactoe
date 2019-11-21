@@ -1,19 +1,22 @@
 package tic.game.turn.move;
 
-import tic.game.Manager;
+import tic.game.Player;
 import tic.game.board.Board;
+import tic.game.turn.result.Exit;
+import tic.game.turn.result.Result;
 
 import java.util.regex.Pattern;
 
 public class QuitMove extends Move {
 
-    public QuitMove(Manager manager) {
-        super(manager);
+
+    public QuitMove(Player owner, Board board) {
+        super(owner, board);
     }
 
     @Override
-    void handle(Board board) {
-
+    public Result handle() {
+        return new Exit();
     }
 
     @Override

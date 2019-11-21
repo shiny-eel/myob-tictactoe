@@ -19,7 +19,7 @@ public class Board implements Displayable {
         }
     }
 
-    boolean place(int row, int col, Player player) throws BoardException {
+    public boolean place(int row, int col, Player player) throws BoardException {
         try {
             _map[row][col].owner = player;
 
@@ -43,7 +43,16 @@ public class Board implements Displayable {
         return false;
     }
 
-    boolean isEmpty(int row, int col) throws BoardException {
+    public boolean isFull() {
+        for (int row = 0; row < _rows; row++) {
+            for (int col = 0; col < _cols; col++) {
+                if (_map[row][col].owner == null)
+                    return false;
+            }
+        }
+        return true;
+    }
+    public boolean isEmpty(int row, int col) throws BoardException {
         try {
             return (_map[row][col].owner == null);
         } catch (IndexOutOfBoundsException e) {

@@ -1,5 +1,6 @@
 package tic;
 
+import tic.game.Manager;
 import tic.game.board.Board;
 import tic.io.ConsoleIO;
 import tic.io.IO;
@@ -15,10 +16,8 @@ public class TicTacToe {
 
     void play(IO io) {
         // Start game
-//        Board b = new Board();
-//        for (int i=0; i<5; i++) {
-//            System.out.println(io.getInput());
-//            b.display(io);
+        new Manager().begin(io);
+
 //        }
 
     }

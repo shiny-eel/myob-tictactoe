@@ -1,27 +1,33 @@
 package tic.game.turn.move;
 
-import tic.game.Manager;
+import tic.game.Player;
 import tic.game.board.Board;
+import tic.game.turn.result.Result;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public abstract class Move {
-    protected Pattern _pattern;
-    protected Matcher _matcher;
-    protected Manager _manager;
+    protected Pattern pattern;
+    protected Matcher matcher;
+//    protected Manager _manager;
+    protected Player owner;
+    protected Board board;
 
-    public Move(Manager manager){
-        _pattern = compilePattern();
-        _manager = manager;
+
+    public Move(Player owner, Board board){
+        pattern = compilePattern();
+        this.owner = owner;
+        this.board = board;
+//        _manager = manager;
     }
 
-    boolean matches(String line) {
-        _matcher = _pattern.matcher(line);
-        return _matcher.find();
+    public boolean matches(String line) {
+        matcher = pattern.matcher(line);
+        return matcher.find();
     }
 
-    abstract void handle(Board board);
+    public abstract Result handle();
 
     abstract Pattern compilePattern();
 

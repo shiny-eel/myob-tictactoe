@@ -3,9 +3,11 @@ package tic.game.turn.result;
 import tic.game.Manager;
 import tic.io.IO;
 
-public class Exit extends Result {
+public class Draw extends Result {
+
     @Override
     public void handle(Manager manager, IO io) {
-        io.showOutput("EXITING"); // TODO
+        io.showOutput("DRAW"); // TODO
+        manager.displayGame();
     }
 }

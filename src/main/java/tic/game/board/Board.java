@@ -52,6 +52,7 @@ public class Board implements Displayable {
         }
         return true;
     }
+
     public boolean isEmpty(int row, int col) throws BoardException {
         try {
             return (_map[row][col].owner == null);
@@ -77,7 +78,7 @@ public class Board implements Displayable {
         try {
             if (_map[r1][c1].owner == null)
                 return false;
-        return _map[r1][c1].owner == _map[r2][c2].owner;
+            return _map[r1][c1].owner == _map[r2][c2].owner;
         } catch (IndexOutOfBoundsException e) {
             throw new BoardException("Coordinate does not exist on board.");
         }

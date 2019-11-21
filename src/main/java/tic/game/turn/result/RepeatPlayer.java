@@ -12,12 +12,15 @@ public class RepeatPlayer extends Result {
         UnrecognisedInput(
                 "Sorry! Your input was unrecognisable. Try again...\n");
         String message;
+
         Type(String msg) {
             message = msg;
         }
 
     }
+
     private Type _type;
+
     public RepeatPlayer(Type type) {
         _type = type;
     }

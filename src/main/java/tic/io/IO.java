@@ -1,6 +1,5 @@
 package tic.io;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public abstract class IO {

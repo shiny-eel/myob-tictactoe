@@ -26,7 +26,7 @@ public class Manager {
         nextTurn();
     }
 
-    public Player nextPlayer(){
+    public Player nextPlayer() {
         if (_currentPlayer.equals(_p1)) {
             _currentPlayer = _p2;
             return _currentPlayer;
@@ -40,7 +40,7 @@ public class Manager {
         return _currentPlayer;
     }
 
-     public void nextTurn() {
+    public void nextTurn() {
         Result result = _currentPlayer.executeTurn(_io);
         result.handle(this, _io);
     }

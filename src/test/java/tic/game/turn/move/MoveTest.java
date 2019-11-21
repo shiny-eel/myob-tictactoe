@@ -7,7 +7,8 @@ import tic.game.Player;
 import tic.game.board.Board;
 import tic.io.MockIO;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MoveTest {
     PlaceMove placeMove;

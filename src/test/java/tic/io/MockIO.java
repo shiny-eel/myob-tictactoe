@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class MockIO extends IO {
     public String lastOut;
-//    public ArrayDeque<String> outputQueue;
+    //    public ArrayDeque<String> outputQueue;
     public String fullOutput = "";
     public ArrayDeque<String> inputQueue;
 
@@ -21,12 +21,16 @@ public class MockIO extends IO {
         _in = new Scanner(file);
     }
 
+    public void queueInput(String line) {
+        inputQueue.addLast(line);
+    }
+
     @Override
     public void showOutput(String output) {
         lastOut = output;
         fullOutput += output + "\n";
 //        outputQueue.addLast(output);
-        super.showOutput(output);
+//        super.showOutput(output);
     }
 
     @Override

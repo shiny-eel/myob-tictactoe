@@ -14,7 +14,7 @@ public abstract class Move {
     protected Board board;
 
 
-    public Move(Player owner, Board board){
+    public Move(Player owner, Board board) {
         pattern = compilePattern();
         this.owner = owner;
         this.board = board;

@@ -7,10 +7,13 @@ import java.util.Scanner;
 
 public class MockIO extends IO {
     public String lastOut;
+//    public ArrayDeque<String> outputQueue;
+    public String fullOutput = "";
     public ArrayDeque<String> inputQueue;
 
     public MockIO() {
         inputQueue = new ArrayDeque<>();
+//        outputQueue = new ArrayDeque<>();
     }
 
     public void setFileInput(String filePath) throws IOException {
@@ -21,6 +24,8 @@ public class MockIO extends IO {
     @Override
     public void showOutput(String output) {
         lastOut = output;
+        fullOutput += output + "\n";
+//        outputQueue.addLast(output);
         super.showOutput(output);
     }
 

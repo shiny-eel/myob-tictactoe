@@ -19,7 +19,7 @@ public class Player {
     private List<Move> _moves;
     private Board _board;
     private static final String PLACE_PROMPT =
-            "Player {0} enter a coord x,y to place your {1} or enter \'q\' to give up: ";
+            "Player {0} enter a coord x,y to place your {1} or enter {2} to give up:";
 
     public Player(String symbol, int number,  Board board) {
         _number = number;
@@ -31,11 +31,11 @@ public class Player {
     }
 
     Result executeTurn(IO io) {
-        Object[] params = new Object[]{""+ _number, _symbol};
+        Object[] params = new Object[]{""+ _number, _symbol, "\'q\'"};
         String msg = MessageFormat.format(PLACE_PROMPT, params);
-        io.showOutput(msg); //TODO
-
+        io.showOutput(msg);
         String in = io.getInput();
+//        io.showOutput("\n");
         for (Move move : _moves) {
             if (move.matches(in)) {
                 return move.handle();
@@ -47,8 +47,5 @@ public class Player {
 
     public String getSymbol() {
         return _symbol;
-    }
-    public int getNumber() {
-        return _number;
     }
 }

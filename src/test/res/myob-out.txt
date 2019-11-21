@@ -1,0 +1,46 @@
+Welcome to Tic Tac Toe!
+
+Here's the current board:
+
+. . .
+. . .
+. . .
+
+Player 1 enter a coord x,y to place your X or enter 'q' to give up:
+Move accepted, here's the current board:
+
+X . .
+. . .
+. . .
+
+Player 2 enter a coord x,y to place your O or enter 'q' to give up:
+Oh no, a piece is already at this place! Try again...
+
+Player 2 enter a coord x,y to place your O or enter 'q' to give up:
+Move accepted, here's the current board:
+
+X . O
+. . .
+. . .
+
+Player 1 enter a coord x,y to place your X or enter 'q' to give up:
+Move accepted, here's the current board:
+
+X . O
+X . .
+. . .
+
+Player 2 enter a coord x,y to place your O or enter 'q' to give up:
+Move accepted, here's the current board:
+
+X . O
+X O .
+. . .
+
+Player 1 enter a coord x,y to place your X or enter 'q' to give up:
+Move accepted, well done you've won the game!
+
+X . O
+X O .
+X . .
+

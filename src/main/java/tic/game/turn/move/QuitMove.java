@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 
 public class QuitMove extends Move {
 
-
     public QuitMove(Player owner, Board board) {
         super(owner, board);
     }

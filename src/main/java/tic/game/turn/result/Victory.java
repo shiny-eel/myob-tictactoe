@@ -6,7 +6,7 @@ import tic.io.IO;
 public class Victory extends Result {
     @Override
     public void handle(Manager manager, IO io) {
-        io.showOutput("VICTORY!"); // TODO
+        io.showOutput("Move accepted, well done you've won the game!\n");
         manager.displayGame();
     }
 }

@@ -6,11 +6,11 @@ import tic.io.IO;
 public class RepeatPlayer extends Result {
     public enum Type {
         OccupiedTile(
-                "Oh no, a piece is already at this place! Try again..."),
+                "Oh no, a piece is already at this place! Try again...\n"),
         OutOfBoard(
-                "Oh no, that coordinate doesn't fit onto the board! Ty again..."),
+                "Oh no, that coordinate doesn't fit onto the board! Ty again...\n"),
         UnrecognisedInput(
-                "Sorry! Your input was unrecognisable. Try again...");
+                "Sorry! Your input was unrecognisable. Try again...\n");
         String message;
         Type(String msg) {
             message = msg;

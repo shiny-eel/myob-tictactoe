@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 public abstract class Move {
     protected Pattern pattern;
     protected Matcher matcher;
-//    protected Manager _manager;
     protected Player owner;
     protected Board board;
 
@@ -19,7 +18,6 @@ public abstract class Move {
         pattern = compilePattern();
         this.owner = owner;
         this.board = board;
-//        _manager = manager;
     }
 
     public boolean matches(String line) {

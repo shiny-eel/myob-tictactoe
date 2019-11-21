@@ -13,7 +13,7 @@ public class Manager {
     private Player _currentPlayer;
     private static final String WELCOME = "Welcome to Tic Tac Toe!\n" +
             "\n" +
-            "Here's the current board:";
+            "Here's the current board:\n";
 
     public void begin(IO io) {
         _board = new Board();

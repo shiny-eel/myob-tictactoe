@@ -9,7 +9,7 @@ public class MockIO extends IO {
     public String lastOut;
     //    public ArrayDeque<String> outputQueue;
     public String fullOutput = "";
-    public ArrayDeque<String> inputQueue;
+    private ArrayDeque<String> inputQueue;
 
     public MockIO() {
         inputQueue = new ArrayDeque<>();

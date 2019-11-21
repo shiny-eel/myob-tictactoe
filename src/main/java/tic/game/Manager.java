@@ -6,10 +6,10 @@ import tic.game.turn.result.Result;
 import tic.io.IO;
 
 public class Manager {
-    protected IO _io;
+    private IO _io;
     private Board _board;
-    Player _p1;
-    Player _p2;
+    private Player _p1;
+    private Player _p2;
     private Player _currentPlayer;
     private static final String WELCOME = "Welcome to Tic Tac Toe!\n" +
             "\n" +

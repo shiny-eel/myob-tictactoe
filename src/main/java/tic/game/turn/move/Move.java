@@ -8,9 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public abstract class Move {
-    protected Pattern pattern;
-    protected Matcher matcher;
-    protected Player owner;
+    private Pattern pattern;
+    Matcher matcher;
+    Player owner;
     protected Board board;
 
 

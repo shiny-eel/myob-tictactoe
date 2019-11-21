@@ -20,12 +20,6 @@ class E2ETest {
 
     }
 
-    @Test
-    void printTest() {
-        System.out.println("Player {0} enter a coord x,y to place your {1} or enter \'q\' to give up: ");
-    }
-
-
     private static final String base = "src/test/res/";
 
     void testFiles(String inputFile, String outputFile) throws IOException {
@@ -33,7 +27,7 @@ class E2ETest {
         io.setFileInput(base + inputFile);
         new Manager().begin(io);
         try {
-            String expected = new String(Files.readAllBytes(Paths.get(base + outputFile)), StandardCharsets.UTF_8);
+            String expected = Files.readString(Paths.get(base + outputFile));
             String actual = io.fullOutput;
 
             assertEquals(expected, actual);

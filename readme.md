@@ -7,8 +7,8 @@ To run the application:
 - Build the code, pointing to the main method in `tic.TicTacToe`
     - Java 11 was used in development
     - `javac -d [desired output dir] tic/TicTacToe.java`
-- Give a file-path pointing to a text file as the first and only argument
-    - within the output dir: `java tic.TicTacToe [test file path]` 
+- To run the game, call the same compiled class
+    - within the output dir: `java tic.TicTacToe` 
 
 To run the unit tests
 - JUnit 5, `org.junit.jupiter`, is needed to run the unit tests
